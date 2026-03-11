@@ -73,7 +73,7 @@ Rabbit-AI/
 | Service  | URL |
 |----------|-----|
 | Frontend | _Deployed on Vercel_ |
-| Backend  | _Deployed on Render_ |
+| Backend  | _Deployed on Vercel_ |
 | API Docs | `<backend-url>/api-docs` |
 
 ---
