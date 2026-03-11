@@ -23,6 +23,22 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // ─── Routes ───────────────────────────────────────────────
 app.use('/api/upload', uploadRoute);
 
+// ─── Root ─────────────────────────────────────────────────
+app.get('/', (_req, res) => {
+  res.json({
+    name: 'Rabbitt AI — Sales Insight Automator',
+    developer: {
+      email: 'suchet.rana.dev@gmail.com',
+      rollNo: '2310992456',
+    },
+    endpoints: {
+      upload: 'POST /api/upload',
+      health: 'GET /health',
+      docs: 'GET /api-docs',
+    },
+  });
+});
+
 // ─── Health Check ─────────────────────────────────────────
 app.get('/health', (_req, res) => {
   res.json({ status: 'ok', timestamp: new Date().toISOString() });

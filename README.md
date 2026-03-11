@@ -183,6 +183,28 @@ Frontend shows success + renders AI summary
 
 ## 📡 API
 
+### `GET /`
+
+Returns basic project and developer info.
+
+**Response:**
+```json
+{
+  "name": "Rabbitt AI — Sales Insight Automator",
+  "developer": {
+    "email": "suchet.rana.dev@gmail.com",
+    "rollNo": "2310992456"
+  },
+  "endpoints": {
+    "upload": "POST /api/upload",
+    "health": "GET /health",
+    "docs": "GET /api-docs"
+  }
+}
+```
+
+---
+
 ### `POST /api/upload`
 
 Upload a file and send AI analysis via email.
